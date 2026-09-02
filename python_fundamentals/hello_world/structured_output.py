@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 x = 3.14
-print(f"""
-Language: Python
-Version: 3
-Pi approx: {x:.2f}
-Computation valid: {1 == 1} 
-""")
-
+print("Language: Python")
+print("Version: 3")
+print(f"Pi approx: {x:.2f}")
+print(f"Computation valid: {1==1}")
