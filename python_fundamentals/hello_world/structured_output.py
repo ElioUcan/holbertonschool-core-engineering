@@ -1,6 +1,5 @@
-
+#!/usr/bin/env python3
 x = 3.145
-
 print(f"""
 Language: Python
 Version: 3
