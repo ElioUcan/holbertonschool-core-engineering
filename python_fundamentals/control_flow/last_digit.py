@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 number = __import__('random').randint(-10000, 10000)
 
-if number < 0:
-    number *=-1
-
-digit = (number % 1) * (-1)
 
 if digit > 5:
     print(f"Last digit of {number} is {digit} and is greater than 5")
