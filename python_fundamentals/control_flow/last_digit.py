@@ -2,6 +2,7 @@
 number = __import__('random').randint(-10000, 10000)
 if number < 0:
     digit = (number * -1) % 10
+    digit *= -1
 else:
     digit = number % 10
 
