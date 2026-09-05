@@ -3,5 +3,5 @@
 letter = "abcdefghijklmnqoprstuvwxyz"
 for l in letter:
     if letter != "e" or letter != "q":
-        print("{}".format(letter))
+        print("{}".format(l))
 
