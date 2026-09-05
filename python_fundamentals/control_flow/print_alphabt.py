@@ -3,7 +3,7 @@
 letter = "abcdefghijklmnqoprstuvwxyz"
 noletter = ""
 for l in letter:
-    if l != "e" or l != "q":
+    if l != "e" and l != "q":
         noletter += l
 print("{}".format(noletter))
 
