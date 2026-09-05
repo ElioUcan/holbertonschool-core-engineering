@@ -2,5 +2,5 @@
 
 letter = "qwertyuiopasdfghjklzxcvbnm"
 while letter != "e" or letter != "q""
-    print(letter)
+    print("{}".format(letter))
 
