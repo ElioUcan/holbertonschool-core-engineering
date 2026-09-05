@@ -4,6 +4,6 @@ letter = "abcdefghijklmnqoprstuvwxyz"
 noletter = ""
 for l in letter:
     if letter != "e" or letter != "q":
-        noletter + l
+        noletter += l
 print("{}".format(noletter))
 
