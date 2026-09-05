@@ -5,5 +5,5 @@ noletter = ""
 for l in letter:
     if l != "e" and l != "q":
         noletter += l
-print("{}".format(noletter))
+print("{}".format(noletter), end="")
 
