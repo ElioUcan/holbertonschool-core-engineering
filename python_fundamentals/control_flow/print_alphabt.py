@@ -1,2 +1,6 @@
 #!/usr/bin/env python3
-print("abcdefghijklmnoprstuvwxyz")
+
+letter = "qwertyuiopasdfghjklzxcvbnm"
+while letter != "e" or letter != "q""
+    print(letter)
+
