@@ -5,6 +5,6 @@ if __name__ == "__main__":
     a = 10
     b = 5
     print("{1} + {2} = {0}".format(add(a, b), a, b))
-    print("{1} - {2} = {0}".format(subs(a, b), a, b))
+    print("{1} - {2} = {0}".format(sub(a, b), a, b))
     print("{1} * {2} = {0}".format(mul(a, b), a, b))
     print("{1} / {2} = {0}".format(div(a, b), a, b))
