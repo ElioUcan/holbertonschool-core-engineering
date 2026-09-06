@@ -8,5 +8,3 @@ def uppercase(str):
         else:
             upper += char
     print("{}".format(upper))
-
-uppercase(input("Enter: "))
