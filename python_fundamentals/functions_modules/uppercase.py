@@ -3,4 +3,4 @@ def uppercase(str):
     upper = ""
     for char in str:
         upper += chr(ord(char) + 25)
-    print(upper)
+    print("{}".format(upper))
