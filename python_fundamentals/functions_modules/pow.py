@@ -6,6 +6,3 @@ def pow(a,b):
     for i in range(b):
         x *= a
     return(x)
-
-a = pow((int(input("number a:"))), (int(input("Number b:"))) )
-print(a)
