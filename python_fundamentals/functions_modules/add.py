@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from simple_add import add
 
-print(add(1, 2))
+if __name__ == "__main__":
+    print(add(1, 2))
 
