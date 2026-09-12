@@ -5,12 +5,12 @@
 class Square:
     """Does nothing"""
 
-    def __init__(self, size=0):
+    def __init__(self, size=0, side = 0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-    def area(self, side = 0):
-        self.side = side
-        return self.__size * self.side
+        self.__side = side
+    def area(self):
+        return self.__size * self.__side
