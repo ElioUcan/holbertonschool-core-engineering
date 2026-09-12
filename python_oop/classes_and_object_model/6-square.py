@@ -1,8 +1,10 @@
-    #!/usr/bin/env python3
-    """Module that defines a Square class."""
-    
-    
-    class Square:
+#!/usr/bin/env python3
+
+
+"""Module that defines a Square class."""
+
+
+class Square:
         """Represents a square."""
     
         def __init__(self, size=0, position=(0, 0)):
