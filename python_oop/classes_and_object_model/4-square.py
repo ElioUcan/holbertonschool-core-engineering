@@ -16,7 +16,7 @@ class Square:
         """The  property size"""
         return self.__size
 
-    @.setter
+    @size.setter
     def (self, value):
         self.__size = value
     
