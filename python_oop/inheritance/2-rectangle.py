@@ -19,3 +19,7 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         return f"""[Rectangle] {self._width}/{self._height}"""
+
+
+if __name__ == "__main__":
+    rectangle = Rectangle()
