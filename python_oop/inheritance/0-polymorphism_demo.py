@@ -13,7 +13,7 @@ class Cat(Animal):
         return "Meow"
 
 
-dog = Dog():
-    print(isintance(dog,Dog))
-    print(isintance(dog,Animal))
-    print(issubclass(Dog, Animal))
+dog = Dog()
+print(isinstance(dog,Dog))
+print(isinstance(dog,Animal))
+print(issubclass(Dog, Animal))
