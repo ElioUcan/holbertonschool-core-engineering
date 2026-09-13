@@ -18,7 +18,7 @@ class Circle(Shape):
     """Circle concrete class"""
 
     def __init__(self, radius = 1):
-        self.pi = 3.14
+        self.pi = 3.14159265358
         self.radius = radius
 
     def area(self):
