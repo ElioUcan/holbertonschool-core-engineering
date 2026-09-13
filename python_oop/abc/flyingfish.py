@@ -38,5 +38,3 @@ flyingfish = FlyingFish()
 flyingfish.fly()
 flyingfish.swim()
 flyingfish.habitat()
-
-mro(flyingfish)
