@@ -42,7 +42,7 @@ class Rectangle(Shape):
 
 def shape_info(single):
     print(f"Area: {single.area()}")
-    print(f"PErimeter: {single.perimeter()}")
+    print(f"Perimeter: {single.perimeter()}")
 
 circle = Circle(radius = 1)
 rectangle = Rectangle(height = 1, width = 1)
