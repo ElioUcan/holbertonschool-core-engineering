@@ -4,8 +4,8 @@
 
 Rectangle = __import__("2-rectangle").Rectangle
 
+
 class Square(Rectangle):
-    
     """Class of a square"""
 
     def __init__(self, size):
@@ -13,4 +13,4 @@ class Square(Rectangle):
         self._size = size
 
     def area(self):
-        return self._size ** 2
+        return self._size**2
