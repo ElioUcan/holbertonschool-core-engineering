@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
+BaseGeometry = __import__('base_geometry').BaseGeometry
 
-"""Base geometry class template made for other classes"""
 
+"""Rectangle module"""
 class BaseGeometry:
 
     """Raises an error if the area method is not implemented"""
