@@ -17,7 +17,7 @@ class Shape(ABC):
 class Circle(Shape):
     """Circle concrete class"""
 
-    def __init__(self, radius = 0,):
+    def __init__(self, radius = 1):
         self.pi = 3.14
         self.radius = radius
 
