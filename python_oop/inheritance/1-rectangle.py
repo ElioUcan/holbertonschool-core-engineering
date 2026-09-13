@@ -2,10 +2,10 @@
 
 """Rectangle class"""
 
-BaseGeometry = __import__('base_geometry').BaseGeometry
+BaseGeometry = __import__("base_geometry").BaseGeometry
+
 
 class Rectangle(BaseGeometry):
-    
     """Init of the class"""
 
     def __init__(self, width, height):
