@@ -3,7 +3,8 @@
 
 """Base geometry class template made for other classes"""
 
-class BaseGeometry
+class BaseGeometry:
+
     def area(self):
         raise Exception("area() is not implemented")
 
