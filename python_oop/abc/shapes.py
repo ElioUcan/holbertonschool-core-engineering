@@ -44,8 +44,8 @@ def shape_info(single):
     single.area()
     single.perimeter()
 
-circle = Circle()
-rectangle = Rectangle()
+circle = Circle(radius = 1)
+rectangle = Rectangle(height = 1, width = 1)
 print(shape_info(circle))
 print(shape_info(rectangle))
 
