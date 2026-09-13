@@ -4,7 +4,7 @@
 
 Rectangle = __import__("2-rectangle").Rectangle
 
-class square(Rectangle):
+class Square(Rectangle):
     
     """Class of a square"""
 
