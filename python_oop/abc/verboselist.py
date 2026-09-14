@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-class Verboselist(list):
+class VerboseList(list):
 
     """A list that does not stop talking"""
 
@@ -19,3 +19,5 @@ class Verboselist(list):
     def pop(self, item):
         super.pop(item)
         print(f"Popped {item} from the list")
+
+verboselist = VerboseList()
