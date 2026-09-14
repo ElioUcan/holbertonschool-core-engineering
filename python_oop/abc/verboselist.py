@@ -12,9 +12,8 @@ class VerboseList(list):
         super().extend(x)
         print(f"Extended the list with {x} items")
     def remove(self, item):
-        if item in list:
-            super().remove(item)
-            print(f"Removed {item} fron the list")
+        super().remove(item)
+        print(f"Removed {item} fron the list")
 
     def pop(self, item):
         super.pop(item)
