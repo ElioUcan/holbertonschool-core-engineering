@@ -14,3 +14,4 @@ def append_write(filename="", text=""):
         for char in text:
             i += 1
         f.write(text)
+        return i
