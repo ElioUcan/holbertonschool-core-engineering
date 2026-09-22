@@ -14,5 +14,3 @@ def write_file(filename="", text=""):
             i += 1
         file.write(text)
         return i
-
-
