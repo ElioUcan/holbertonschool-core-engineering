@@ -19,7 +19,7 @@ async def handle_connection(websocket):
 
 
 async def main():
-    server = await serve(handle_connection(), '127.0.0.1', 8765)
+    server = await serve(handle_connection, '127.0.0.1', 8765)
     await server.serve_forever()
 
 
