@@ -3,22 +3,25 @@
 """Module number 4"""
 
 import asyncio
-from websockets.asyncio.client import connect
+from websockets.asyncio.server import serve
 from websockets.exceptions import ConnectionClosed
 
-async def connect_and_send(uri: str, text: str) -> str:
+async def handle_connection(websocket):
     """Sends a message and waits for the response"""
     try:
-        async with connect(uri) as websocket:
-            if len(text.strip()) == 0:
+        async for message in websocket:
+            if len(message.strip()) == 0:
                 await websocket.send(f'ERR:EMPTY')
             else:
-                await websocket.send(f'OK:{text}')
-            message = await websocket.recv()
-            print(f'{message}')
+                await websocket.send(f'OK:{message}')
     except ConnectionClosed:
-        print(ConnectionClosed)
+        pass
+
+
+async def main():
+    server = await serve(handle_connection(), '127.0.0.1', 8765)
+    await server.serve_forever()
 
 
 if __name__ == "__main__":
-    asyncio.run(connect_and_send("ws://127.0.0.1:8765", 'Hello WebSocket'))
+    asyncio.run(main())
