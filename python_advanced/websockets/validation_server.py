@@ -4,17 +4,20 @@
 
 import asyncio
 from websockets.asyncio.client import connect
-
+from websockets.exceptions import ConnectionClosed
 
 async def connect_and_send(uri: str, text: str) -> str:
     """Sends a message and waits for the response"""
-    async with connect(uri) as websocket:
-        if len(text.strip()) == 0:
-            await websocket.send(f'ERR:EMPTY')
-        else:
-            await websocket.send(f'OK:{text}')
-        message = await websocket.recv()
-        print(f'{message}')
+    try:
+        async with connect(uri) as websocket:
+            if len(text.strip()) == 0:
+                await websocket.send(f'ERR:EMPTY')
+            else:
+                await websocket.send(f'OK:{text}')
+            message = await websocket.recv()
+            print(f'{message}')
+    except ConnectionClosed:
+        print(ConnectionClosed)
 
 
 if __name__ == "__main__":
