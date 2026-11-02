@@ -5,10 +5,11 @@
 from websockets.asyncio.server import serve
 import asyncio
 
+
 async def connnection_handler(websocket):
     """Takes a web socket and responds hello"""
     async for message in websocket:
-      await websocket.send(message)
+        await websocket.send(message)
 
 
 async def main():
@@ -16,5 +17,5 @@ async def main():
     await server.serve_forever()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     asyncio.run(main())
