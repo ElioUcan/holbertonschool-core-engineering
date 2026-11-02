@@ -10,7 +10,7 @@ async def connect_and_send(uri: str, text: str) -> str:
     """Sends a message and waits for the response"""
     async with connect(uri) as websocket:
         if len(text.strip()) == 0:
-            await websocket.send(f'err:{text}')
+            await websocket.send(f'ERR:EMPTY')
         else:
             await websocket.send(f'OK:{text}')
         message = await websocket.recv()
