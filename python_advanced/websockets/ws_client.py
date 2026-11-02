@@ -9,7 +9,7 @@ from websockets.asyncio.client import connect
 async def connecr_and_send(uri: str, text: str) -> str:
     """Sends a message and waits for the response"""
     async with connect("ws://localhost:8765") as websocket:
-        await websocket.send("Hello WebSocket")
+        await websocket.send('Hello WebSocket')
         message = await websocket.recv()
         print(message)
 
