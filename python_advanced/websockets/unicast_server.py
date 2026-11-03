@@ -12,7 +12,7 @@ connected_clients = set()
 
 async def handle_client(websocket):
     """Unicast connection"""
-    connected_clients.add(websockets)
+    connected_clients.add(websocket)
     try:
         async for message in websocket:
             await websocket.send(f"U:{message}")
