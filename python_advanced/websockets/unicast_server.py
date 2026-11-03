@@ -15,7 +15,7 @@ async def handle_client(websocket):
     connected_clients.add(websockets)
     try:
         async for message in websocket:
-            await websocket, send(f"U:{message}")
+            await websocket.send(f"U:{message}")
     except ConnectionClosed:
         pass
     finally:
