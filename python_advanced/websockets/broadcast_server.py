@@ -14,9 +14,9 @@ async def handle_client(websocket):
     """Unicast connection"""
     connected_clients.add(websocket)
     try:
-        for client in connected_clients:
-            async for message in websocket:
-                await websocket.send(f"B:{message}")
+        async for message in websocket:
+            for client in connected_clients.copy():
+                await client.send(f"U:{message}")
     except ConnectionClosed:
         pass
     finally:
