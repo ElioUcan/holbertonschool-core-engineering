@@ -16,7 +16,7 @@ async def handle_client(websocket):
     try:
         async for message in websocket:
             for client in connected_clients.copy():
-                await client.send(f"U:{message}")
+                await client.send(f"B:{message}")
     except ConnectionClosed:
         pass
     finally:
