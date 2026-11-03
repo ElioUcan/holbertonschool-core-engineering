@@ -5,45 +5,26 @@
 import asyncio
 import json
 from websockets.asyncio.client import serve
+from websockets.exceptions import ConnectionClosed
 
-connected_clients = {}
+connected_clients = set()
 
 
 async def handle_client(websocket):
     """Unicast connection"""
-    idx = None
+    connected_clients.add(websockets)
     try:
-        message1 = await websocket.recv()
-        data = json.loads(message1)
-
-        if data.get("action") == "register" and data.get("idx"):
-            idx = data["idx"]
-            connected_clients[idx] = websocket
-            await websocket.send("User registered")
-        else:
-            await websocket.close()
-            return
         async for message in websocket:
-            data = json.loads(message)
-            target = data.get("target")
-            payload = data.get("message")
-
-            if target in connected_clients:
-                target_ws = connected_clients[target]
-                await target_ws.send(f"U:{message}")
-            else:
-                pass
-    except Exception as e:
+            await websocket, send(f"U:{message}")
+    except ConnectionClosed:
         pass
-
     finally:
-        if idx in connected_clients:
-            del connected_clients[idx]
+        connected_clients.remove(websocket)
 
 
 async def main():
-    async with websocket.serve(handle_client, "127.0.0.1", 8765):
-        await asyncio.Future()
+    server = await serve(handle_client, "127.0.0.1", 8765)
+    await server.serve_forever()
 
 
 if __name__ == "__main__":
