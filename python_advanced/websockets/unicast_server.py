@@ -4,7 +4,7 @@
 
 import asyncio
 import json
-from websockets.asyncio.client import serve
+from websockets.asyncio.server import serve
 from websockets.exceptions import ConnectionClosed
 
 connected_clients = set()
