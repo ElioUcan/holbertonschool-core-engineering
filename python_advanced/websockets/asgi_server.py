@@ -29,7 +29,7 @@ async def ws_endpoint(websocket: WebSocket):
 
 app = Starlette(
     routes=[
-        Route("/", hpage_endpoint), 
+        Route("/", hpage_endpoint),
         WebSocketRoute("/ws", ws_endpoint)
     ]
 )
