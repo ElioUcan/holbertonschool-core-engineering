@@ -27,4 +27,9 @@ async def ws_endpoint(websocket: WebSocket):
         pass
 
 
-app = Starlette(routes=[Route("/", hpage_endpoint), WebSocketRoute("/ws", ws_endpoint)])
+app = Starlette(
+    routes=[
+        Route("/", hpage_endpoint), 
+        WebSocketRoute("/ws", ws_endpoint)
+    ]
+)
