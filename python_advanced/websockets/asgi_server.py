@@ -7,12 +7,12 @@ from starlette.applications import Starlette
 from starlette.responses import HTMLResponse
 
 
-
 async def hpage_endpoint(request):
     """
     HTTP endpoint displays html
     """
     return HTMLResponse("<h1>WebSocket Echo</h1>")
+
 
 async def ws_endpoint(websocket: WebSocket):
     """
@@ -27,10 +27,4 @@ async def ws_endpoint(websocket: WebSocket):
         pass
 
 
-
-
-app = Starlette(routes=[
-    Route('/', hpage_endpoint),
-    WebSocketRoute('/ws', ws_endpoint)
-])
-
+app = Starlette(routes=[Route("/", hpage_endpoint), WebSocketRoute("/ws", ws_endpoint)])
